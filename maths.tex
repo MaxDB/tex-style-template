@@ -44,7 +44,10 @@
 %quantity
 \newcommand{\range}[2]{^{+#1}_{\;\!\text{-}\;\!#2}}
 
-%highlighting
-\newcommand{\hlcolour}[0]{yellow}
-\newcommand{\mathhl}[1]{\colorbox{\hlcolour}{$\displaystyle #1$}}
-\newcommand{\parahl}[1]{\sethlcolor{\hlcolour}\hl{#1}}
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+
+
